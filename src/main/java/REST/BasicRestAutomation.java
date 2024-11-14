@@ -6,11 +6,12 @@ import io.restassured.path.json.JsonPath;
 import static io.restassured.RestAssured.*;
 import static org.hamcrest.Matchers.*;
 
+import org.testng.Assert;
+
 import Payloads.AddPlace;
 
 public class BasicRestAutomation {
-	public static void main(String[] args) {
-		
+	public static void main(String args[]) {
 		//Given based on Input Details
 		RestAssured.baseURI = "https://rahulshettyacademy.com";
 		String Response = given().log().all().queryParam("key", "qaclick123").headers("Content-Type", "application/json")
@@ -36,6 +37,7 @@ public class BasicRestAutomation {
 		JsonPath Data = new JsonPath(AdressData);
 		String GetAdress = Data.getString("address");
 		System.out.println("getData: "+ GetAdress);
+		Assert.assertEquals("GetAdress", "70 Summer walk, USA");
 		
 	}
 }
