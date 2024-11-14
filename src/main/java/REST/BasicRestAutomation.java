@@ -36,5 +36,6 @@ public class BasicRestAutomation {
 		JsonPath Data = new JsonPath(AdressData);
 		String GetAdress = Data.getString("address");
 		System.out.println("getData: "+ GetAdress);
+		System.out.println("Manohar");
 	}
 }
