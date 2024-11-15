@@ -34,10 +34,9 @@ public class BasicRestAutomation {
 		//Get Method
 		String AdressData = given().queryParam("key", "qaclick123").queryParam("place_id", PlaceId).when().get("maps/api/place/get/json")
 		.then().log().all().assertThat().statusCode(200).extract().response().asString();
-		JsonPath Data = new JsonPath(AdressData);
-		String GetAdress = Data.getString("address");
+		JsonPath Data = ReUsableMethods.rawToJson(AdressData);
+		String GetAdress = ((JsonPath) Data).getString("address");
 		System.out.println("getData: "+ GetAdress);
-		Assert.assertEquals("GetAdress", "70 Summer walk, USA");
-		
+		Assert.assertEquals(GetAdress, "70 Summer walk, USA");
 	}
 }
