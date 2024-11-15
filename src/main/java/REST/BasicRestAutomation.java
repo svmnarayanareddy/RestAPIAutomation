@@ -8,14 +8,14 @@ import static org.hamcrest.Matchers.*;
 
 import org.testng.Assert;
 
-import Payloads.AddPlace;
+import Payloads.PayloadData;
 
 public class BasicRestAutomation {
 	public static void main(String args[]) {
 		//Given based on Input Details
 		RestAssured.baseURI = "https://rahulshettyacademy.com";
 		String Response = given().log().all().queryParam("key", "qaclick123").headers("Content-Type", "application/json")
-		.body(AddPlace.AddNewPlace()).when().post("maps/api/place/add/json")
+		.body(PayloadData.AddNewPlace()).when().post("maps/api/place/add/json")
 		.then().log().all().assertThat().statusCode(200).body("status", equalTo("OK")).extract().asString();
 		System.out.println(Response);
 		JsonPath js = new JsonPath(Response);
