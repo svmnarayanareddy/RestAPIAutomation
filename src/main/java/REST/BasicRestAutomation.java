@@ -6,16 +6,21 @@ import io.restassured.path.json.JsonPath;
 import static io.restassured.RestAssured.*;
 import static org.hamcrest.Matchers.*;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+
 import org.testng.Assert;
 
 import Payloads.PayloadData;
 
 public class BasicRestAutomation {
-	public static void main(String args[]) {
+	public static void main(String args[]) throws IOException {
 		//Given based on Input Details
 		RestAssured.baseURI = "https://rahulshettyacademy.com";
+		//Reading Payload from Json file with Files class and converting to string as output
 		String Response = given().log().all().queryParam("key", "qaclick123").headers("Content-Type", "application/json")
-		.body(PayloadData.AddNewPlace()).when().post("maps/api/place/add/json")
+		.body(new String (Files.readAllBytes(Path.of("C:\\Users\\Manohar Reddy\\Downloads\\addPlace.json")))).when().post("maps/api/place/add/json")
 		.then().log().all().assertThat().statusCode(200).body("status", equalTo("OK")).extract().asString();
 		System.out.println(Response);
 		JsonPath js = new JsonPath(Response);
