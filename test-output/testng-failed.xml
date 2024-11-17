@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="REST.SumValidation">
+      <class name="REST.DynamicJson">
         <methods>
-          <include name="SumofCources"/>
+          <include name="addBook"/>
         </methods>
-      </class> <!-- REST.SumValidation -->
+      </class> <!-- REST.DynamicJson -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
