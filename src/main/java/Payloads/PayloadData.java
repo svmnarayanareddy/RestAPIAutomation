@@ -82,4 +82,22 @@ public class PayloadData {
 		return AddBook;
 		
 	}
+	
+	public static String CreateBug() {
+		String BugData = "{\r\n"
+				+ "    \"fields\": {\r\n"
+				+ "       \"project\":\r\n"
+				+ "       {\r\n"
+				+ "          \"key\": \"SCRUM\"\r\n"
+				+ "       },\r\n"
+				+ "       \"summary\": \"Website is not working\",\r\n"
+				+ "       \r\n"
+				+ "       \"issuetype\": {\r\n"
+				+ "          \"name\": \"Bug\"\r\n"
+				+ "       }\r\n"
+				+ "   }\r\n"
+				+ "}";
+		return BugData;
+		
+	}
 }

@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="REST.DynamicJson">
+      <class name="REST.JiraBug">
         <methods>
-          <include name="addBook"/>
+          <include name="CreateBug"/>
         </methods>
-      </class> <!-- REST.DynamicJson -->
+      </class> <!-- REST.JiraBug -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
