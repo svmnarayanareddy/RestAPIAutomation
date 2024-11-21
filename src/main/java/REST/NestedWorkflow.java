@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 import Payloads.PayloadData;
 import io.restassured.path.json.JsonPath;
 
-public class SumValidation {
+public class NestedWorkflow {
 	@Test
 	public void SumofCources() {
 		

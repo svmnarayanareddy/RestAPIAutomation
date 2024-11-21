@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="REST.DynamicJson">
+      <class name="REST.OAuth">
         <methods>
-          <include name="addBook"/>
+          <include name="Authorization"/>
         </methods>
-      </class> <!-- REST.DynamicJson -->
+      </class> <!-- REST.OAuth -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
