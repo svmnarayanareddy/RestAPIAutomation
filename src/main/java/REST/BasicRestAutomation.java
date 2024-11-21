@@ -12,8 +12,6 @@ import java.nio.file.Path;
 
 import org.testng.Assert;
 
-import Payloads.PayloadData;
-
 public class BasicRestAutomation {
 	public static void main(String args[]) throws IOException {
 		//Given based on Input Details

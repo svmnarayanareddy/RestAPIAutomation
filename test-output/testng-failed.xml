@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="REST.OAuth">
+      <class name="REST.Serialization">
         <methods>
-          <include name="Authorization"/>
+          <include name="serializeTest"/>
         </methods>
-      </class> <!-- REST.OAuth -->
+      </class> <!-- REST.Serialization -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
