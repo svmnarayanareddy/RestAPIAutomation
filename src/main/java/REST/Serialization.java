@@ -1,6 +1,5 @@
 package REST;
 
-import io.restassured.RestAssured;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.builder.ResponseSpecBuilder;
 import io.restassured.http.ContentType;
@@ -25,12 +24,12 @@ public class Serialization {
 	public void serializeTest() {
 	
 	AddPlace Ap = new AddPlace();
-	Ap.setName("SVSLS Travells");
+	Ap.setName("SVLS Transports");
 	Ap.setAccuracy(50);
 	Ap.setLanguage("English-IN");
-	Ap.setWebsite("http://svlstransports.com");
+	Ap.setWebsite("http://svls.com");
 	Ap.setAddress("N.S.P Colony chimakurthy");
-	
+	Ap.setPhone_number("(+91) 9849303313");
 	List<String> myList = new ArrayList<String>();
 	myList.add("Transpotaion");
 	myList.add("Materials");
@@ -44,11 +43,11 @@ public class Serialization {
 	 RequestSpecification req =new RequestSpecBuilder().setBaseUri("https://rahulshettyacademy.com").addQueryParam("key", "qaclick123")
 			 .setContentType(ContentType.JSON).build();
 	 ResponseSpecification resspec =new ResponseSpecBuilder().expectStatusCode(200).expectContentType(ContentType.JSON).build();
-	 RequestSpecification res = given().spec(req)
-	 .body(Ap);
+	 
+	 RequestSpecification res = given().log().all().spec(req).body(Ap);
 	 
 	 Response response = res.when().post("/maps/api/place/add/json").
-			 then().spec(resspec).extract().response();
+			 then().log().all().spec(resspec).extract().response();
 
 	String responseString=response.asString();
 	System.out.println(responseString);
