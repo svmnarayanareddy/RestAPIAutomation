@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
@@ -97,6 +98,21 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           </reporter-output>
         </test-method> <!-- CreateBug -->
       </class> <!-- REST.JiraBug -->
+=======
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-11-21T23:17:12 IST" name="Default suite" finished-at="2024-11-21T23:17:16 IST" duration-ms="3956">
+    <groups>
+    </groups>
+    <test started-at="2024-11-21T23:17:12 IST" name="Default test" finished-at="2024-11-21T23:17:16 IST" duration-ms="3956">
+      <class name="REST.Serialization">
+        <test-method signature="serializeTest()[pri:0, instance:REST.Serialization@21e360a]" started-at="2024-11-21T23:17:12 IST" name="serializeTest" finished-at="2024-11-21T23:17:16 IST" duration-ms="3886" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- serializeTest -->
+      </class> <!-- REST.Serialization -->
+>>>>>>> 5d7f7a4856196e9f469130d1454fcba51d5eed70
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

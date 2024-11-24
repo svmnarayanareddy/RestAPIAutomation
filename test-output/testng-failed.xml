@@ -3,11 +3,19 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
+<<<<<<< HEAD
       <class name="REST.JiraBug">
         <methods>
           <include name="CreateBug"/>
         </methods>
       </class> <!-- REST.JiraBug -->
+=======
+      <class name="REST.Serialization">
+        <methods>
+          <include name="serializeTest"/>
+        </methods>
+      </class> <!-- REST.Serialization -->
+>>>>>>> 5d7f7a4856196e9f469130d1454fcba51d5eed70
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
